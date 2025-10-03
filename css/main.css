@@ -1,0 +1,30 @@
+body {
+    background-color: rgb(30, 30, 30);
+}
+.titulo {
+    color: rgb(160, 0, 0);
+}
+header {
+    text-align: center;
+}
+nav {
+    list-style-position: inside;
+    text-align: center;
+}
+h1 {
+    color: rgb(200, 200, 200);
+}
+h2 {
+    color: rgb(200, 200, 200);
+}
+p {
+    color: rgb(200, 200, 200);
+}
+li {
+    color: rgb(200, 200, 200);
+}
+hr {
+    border: 0;
+    height: 2px;
+    background-color: rgb(160, 0, 0);
+}

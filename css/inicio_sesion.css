@@ -1,0 +1,22 @@
+form {
+    width: 400px;
+    margin: 0 auto;
+}
+label {
+    color: rgb(200, 200, 200);
+    font-weight: bold;
+}
+button {
+    background-color: rgb(160, 0, 0);
+}
+fieldset {
+    border: 2px solid rgb(160, 0, 0);
+    border-radius: 8px;
+}
+legend {
+    font-size: 25px;
+    font-weight: bold;
+    color: rgb(160, 0, 0);
+}
+
+

@@ -1,0 +1,11 @@
+.sublista1 {
+    font-size: 20px;
+    font-weight: bold;
+}
+.rojo {
+    color: rgb(160, 0, 0);
+}
+p {
+    padding: 2px;
+    margin: 2px;
+}
