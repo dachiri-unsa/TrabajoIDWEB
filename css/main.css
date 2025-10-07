@@ -17,14 +17,34 @@ h1 {
 h2 {
     color: rgb(200, 200, 200);
 }
+h3 {
+    color: rgb(200, 200, 200);
+}
 p {
     color: rgb(200, 200, 200);
 }
+
 li {
     color: rgb(200, 200, 200);
+}
+.centrado {
+    text-align: center;
+    display: block;
+    margin: 0 auto;
+}
+main p {
+    max-width: 1400px;
+    margin: 0 auto 1.5em auto; /* centrado y con espacio inferior */
+    line-height: 1.6;          /* mejora la legibilidad */
 }
 hr {
     border: 0;
     height: 2px;
     background-color: rgb(160, 0, 0);
+}
+a:visited {
+    color: rgb(160, 50, 50);
+}
+a:hover {
+    background-color: rgb(85, 25, 25);
 }
