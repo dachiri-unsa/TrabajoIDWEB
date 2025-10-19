@@ -1,47 +1,68 @@
 /* ---- APARTADO DE LA NAV-BAR ----- */
-
+* {
+    box-sizing: border-box;
+}
 ul {
     margin: 0;
+    padding: 0;
 }
+
+
 .navegador {
-    background-color: #333;
-    width: 100vw;
-    border-top: 5px solid #a00000;
-    border-bottom: 5px solid #a00000;
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: space-evenly;
     position: sticky;
     top: 0;
+    z-index: 1000;
+    width: 100%;
+    background-color: #333;
+    border-bottom: 5px solid #393939;
+    display: flex;
+    align-items: center;
+    padding: 5px 12px ;
 }
 .navegador__ul {
-    margin: 0;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-}
-.navegador__item {
     list-style: none;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    width: 100%;
+}
+
+
+.navegador__imagen {
+    display: block;
+    height: 48px;
+    width: auto;
+}
+.navegador__item--logo {
+    margin-right: 10px;
+}
+.navegador__logo-link {
+    display: inline-block;
+}
+
+
+.navegador__item {
+    align-items: center;
 }
 .navegador__link {
-    flex-grow: 1 1 30px;
-    padding: 5px;
-    min-width: 70px;
-    background-color: #a00000;
-    border: 3px solid #222;
-    border-radius: 5px;
     display: inline-block;
-    color: #333;
-    font-size: 20px;
+    padding: 8px 12px;
+    min-width: 70px;
+    text-align: center;
     text-decoration: none;
+    font-size: 1rem;
+    flex-grow: 1 1 30px;
+    border-radius: 6px;
+    border: 3px solid #222;
+    background-color: #a00000;
+    color: #c8c8c8;
 }
-.navegador__imagen {
+.navegador__item--espaciador {
+    margin-left: auto;
+}
 
-    width: 75px;
-    height: auto;
-}
-.link--inicioSesion {
-    margin-left: 40%;
+.link--login {
+    
 }
 
 /*----- OTROS -----*/
