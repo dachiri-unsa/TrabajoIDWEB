@@ -1,0 +1,56 @@
+/* ---- APARTADO DE LA NAV-BAR ----- */
+
+ul {
+    margin: 0;
+}
+.navegador {
+    background-color: #333;
+    width: 100vw;
+    border-top: 5px solid #a00000;
+    border-bottom: 5px solid #a00000;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+    position: sticky;
+    top: 0;
+}
+.navegador__ul {
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+.navegador__item {
+    list-style: none;
+}
+.navegador__link {
+    flex-grow: 1 1 30px;
+    padding: 5px;
+    min-width: 70px;
+    background-color: #a00000;
+    border: 3px solid #222;
+    border-radius: 5px;
+    display: inline-block;
+    color: #333;
+    font-size: 20px;
+    text-decoration: none;
+}
+.navegador__imagen {
+
+    width: 75px;
+    height: auto;
+}
+.link--inicioSesion {
+    margin-left: 40%;
+}
+
+/*----- OTROS -----*/
+.imagenPrincipal {
+    display: flex;
+    justify-content: center;
+}
+.imagen {
+    max-width: 100%;
+    height: auto;
+    
+}

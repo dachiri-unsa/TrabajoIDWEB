@@ -7,38 +7,52 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PZ</title>
     <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/index.css">
 </head>
 <body>
     <!-- Inicio de la pagina web -->
-    <hr>
+    <div class="navegador">
+        <ul class="navegador__ul">
+            <li class="navegador__item"><img class="navegador__imagen" src = "imagenes/inicio/PzLogo_Blood.png" alt = "logo pz"></li>
+            <li class="navegador__item"><a href="#mecanicas" class="navegador__link">Mecanicas</a></li>
+            <li class="navegador__item"><a href="#extras" class="navegador__link">Extras</a></li>
+            <li class="navegador__item"><a href="" class="navegador__link">Actualizaciones</a></li>
+            <li class="navegador__item"><a href="" class="navegador__link link--inicioSesion">Inicio sesion</a></li>
+        </ul>
+    </div>
+    
     <header>
-        <h1 class="titulo"> Project Zomboid <img src = "imagenes/inicio/PzLogo_Blood.png" alt = "logo pz" height="50px" style="vertical-align:-10px;"> </h1>
+        <h1 class="titulo"> Project Zomboid </h1>
         <p>
             <strong>Project Zomboid</strong> es un juego de supervivencia en un apocalipsis zombie realista, de mundo abierto. 
             En este juego el jugador tiene que sobrevivir la mayor cantidad de tiempo mientras puede hacer muchas cosas 
             que el juego nos brinda.
         </p>
-        
-        <img src = "imagenes/inicio/basePZ.jpg" alt = "ejemplo de base en el juego" height= "300px">
+        <div class="imagenPrincipal">
+            <img class="imagen" src = "imagenes/inicio/basePZ.jpg" alt = "ejemplo de base en el juego" height= "300px">
+        </div>
+
     </header>
-    <hr>
+
+
     <nav>
         <p>Registrarse: <a href="Paginas/inicio_sesion.html">Aqui</a></p>
         <hr>
-        <h2>Mecanicas del juego</h2>
+        <h2 id="mecanicas">Mecanicas del juego</h2>
         <ul>
             <strong>
             <!--Nos lleva a la otra pagina-->
             <li><a href="Paginas/habilidades.html">Habilidades</a></li>
             <li><a href="Paginas/personaje.html">Personaje</a></li>
-            <li><a href = "https://map.projectzomboid.com/">Mapa-Ciudades</a></li>
+            <!-- El target="_blank" es para que se abra en una nueva pestaña-->
+            <li><a href = "https://map.projectzomboid.com/" target="_blank">Mapa-Ciudades</a></li>
             <li>Modos de juego</li>
             </strong>
         </ul>
         
         <hr>
     
-        <h2>Extras</h2>
+        <h2 id="extras">Extras</h2>
         <ul>
             <strong>
             <li>Mods recomendados</li>
@@ -73,7 +87,7 @@
             permite al jugador personalizar la configuración de su partida, como la población de zombis, la transmisibilidad 
             de virus, la rareza del botín, regularidad de eventos, aparición de autos, entre otros.
         </p>
-        <img class="centrado" src="imagenes/inicio/baner.jpg" alt="banerPZ" width="600px">
+        <!--<img class="centrado" src="imagenes/inicio/baner.jpg" alt="banerPZ" width="600px"> -->
     </main>
 
     <hr>

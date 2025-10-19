@@ -1,8 +1,9 @@
 body {
-    background-color: rgb(30, 30, 30);
+    margin: 0;
+    background-color: #322;
 }
 .titulo {
-    color: rgb(160, 0, 0);
+    color: #a00000;
 }
 header {
     text-align: center;
@@ -41,9 +42,6 @@ hr {
     border: 0;
     height: 2px;
     background-color: rgb(160, 0, 0);
-}
-a:visited {
-    color: rgb(160, 50, 50);
 }
 a:hover {
     background-color: rgb(85, 25, 25);
