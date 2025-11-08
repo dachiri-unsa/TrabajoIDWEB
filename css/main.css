@@ -1,14 +1,12 @@
 * {
     box-sizing: border-box;
-}
-ul {
     margin: 0;
     padding: 0;
 }
 
 body {
     margin: 0;
-    background-color: #322;
+    background: url(../imagenes/inicio/banner_mejorado.jpg) center -30%/cover no-repeat fixed #000;
 }
 .titulo {
     color: #a00000;
@@ -36,7 +34,7 @@ main p {
 hr {
     border: 0;
     height: 2px;
-    background-color: rgb(160, 0, 0);
+    background-color: #a00000;
 }
 a:hover {
     background-color: rgb(85, 25, 25);
@@ -48,8 +46,8 @@ a:hover {
     top: 0;
     z-index: 1000;
     width: 100%;
-    background-color: #333;
-    border-bottom: 5px solid #393939;
+    background-color: #303030;
+    border-bottom: 3px solid #800000;
     display: flex;
     align-items: center;
     padding: 5px 12px;
