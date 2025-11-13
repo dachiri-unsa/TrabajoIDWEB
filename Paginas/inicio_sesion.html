@@ -4,34 +4,40 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Iniciar sesión</title>
-    <link rel="stylesheet" href="../css/main.css">
     <link rel="stylesheet" href="../css/inicio_sesion.css">
 </head>
 <body>
     <header>
+        <a class="botonVolver" href="../index.html">Volver</a>
         <h1 class="titulo">Inicio de sesion</h1>
     </header>
-    <nav>
-        <a href="../index.html">Volver</a>
-    </nav>
-    <form action="#" method="post">
-        <fieldset>
-            <legend>Registrarse</legend>
-            <label for="nombre">Ingrese nombres completos:</label>
-            <input type="text" name="nombre" id="nombre" required>
-            <br><br>
-            <label for="correo">Ingrese su correo</label>
-            <input type="email" name="correo" id="correo" required>
-            <br><br>
-            <input type="checkbox" id="terminos" required>
-            <label for="terminos">Acepto los terminos y condiciones</label>
-            <br>
-            <input type="checkbox" id="correos_recibidos">
-            <label for="correos_recibidos">Acepto recibir correos sobre la informacion nueva publicada</label>
-            <br><br>
-            <button type="submit">Registrarme</button>
-            <button type="reset">Cancelar</button>
-        </fieldset>
-    </form>
+    <div class="contenedorFormulario">
+        <form class="contenedorFormulario__formulario" action="#" method="post">
+            <div class="formulario__texto">
+                <label for="nombre">Nombres completos</label>
+                <input type="text" name="nombre" id="nombre" placeholder="Ej: Juan Pérez" required>
+            </div>
+
+            <div class="formulario__texto">
+                <label for="correo">Correo electrónico</label>
+                <input type="email" name="correo" id="correo" placeholder="correo@ejemplo.com" required>
+            </div>
+
+            <div class="checkbox-group">
+                <input type="checkbox" id="terminos" required>
+                <label for="terminos">Acepto los términos y condiciones</label>
+            </div>
+
+            <div class="checkbox-group">
+                <input type="checkbox" id="correos_recibidos">
+                <label for="correos_recibidos">Acepto recibir correos sobre información nueva publicada</label>
+            </div>
+
+            <div class="button-group">
+                <button type="submit">Registrarme</button>
+                <button type="reset">Cancelar</button>
+            </div>
+        </form>
+    </div>
 </body>
 </html>

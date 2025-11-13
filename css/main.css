@@ -5,7 +5,6 @@
 }
 
 body {
-    margin: 0;
     background: url(../imagenes/inicio/banner_mejorado.jpg) center -30%/cover no-repeat fixed #000;
 }
 .titulo {
@@ -51,11 +50,11 @@ a:hover {
     display: flex;
     align-items: center;
     padding: 5px 12px;
-    transition: padding 0.08s ease;
+    transition: padding 0.1s ease;
 }
 .navegador:hover {
     background-color: #2c2c2c;
-    padding: 12px 12px;
+    padding: 7px 12px;
 }
 .navegador__ul {
     list-style: none;
