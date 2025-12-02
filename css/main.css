@@ -13,10 +13,6 @@ body {
 header {
     text-align: center;
 }
-nav {
-    list-style-position: inside;
-    text-align: center;
-}
 h1, h2, h3, p, li {
     color: #c8c8c8;
 }
@@ -25,21 +21,7 @@ h1, h2, h3, p, li {
     display: block;
     margin: 0 auto;
 }
-main p {
-    max-width: 1400px;
-    margin: 0 auto 1.5em auto; /* centrado y con espacio inferior */
-    line-height: 1.6;          /* mejora la legibilidad */
-}
-hr {
-    border: 0;
-    height: 2px;
-    background-color: #a00000;
-}
-a:hover {
-    background-color: rgb(85, 25, 25);
-}
 /* ---- APARTADO DE LA NAV-BAR ----- */
-
 .navegador {
     position: sticky;
     top: 0;
@@ -47,6 +29,7 @@ a:hover {
     width: 100%;
     background-color: #303030;
     border-bottom: 3px solid #800000;
+    box-shadow: 0 0 10px 2px #a00000;
     display: flex;
     align-items: center;
     padding: 5px 12px;
@@ -117,4 +100,13 @@ a:hover {
     border: 3px solid #a00000;
     box-shadow: 0 0 10px 2px #a00000;
     margin-right: 20px;
+}
+
+.footer-pagina {
+    color: #c8c8c8;
+    background-color: #303030;
+    border-top: 3px solid #202020;
+    box-shadow: 0 0 16px 2px #202020;
+    height: 8vh;
+    text-align: center;
 }

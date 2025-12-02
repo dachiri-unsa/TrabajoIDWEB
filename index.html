@@ -19,10 +19,10 @@
                 </a>
             </li>
             <li class="navegador__item">
-                <a href="#mecanicas" class="navegador__link">Mecanicas del juego</a>
+                <a href="Paginas/habilidades.html" class="navegador__link">Habilidades</a>
             </li>
             <li class="navegador__item">
-                <a href="#extras" class="navegador__link">Extras</a>
+                <a href="Paginas/personaje.html" class="navegador__link">Personaje</a>
             </li>
             <li class="navegador__item">
                 <a href="https://map.projectzomboid.com/" target="_blank" class="navegador__link">Mapa completo</a>
@@ -43,46 +43,39 @@
         </div>
     </div>
 
-    <!--
-        <div class="imagenPrincipal">
-            <img class="imagen" src = "imagenes/inicio/basePZ.jpg" alt = "ejemplo de base en el juego" height= "300px">
+    <div class="apartados">
+        <div class="apartados__item">
+            <h2 id="mecanicas">Mecanicas del juego</h2>
+            <ul class="apartados__lista">
+                <li class="apartados__lista__item">
+                    <a href="Paginas/habilidades.html" class="apartados__lista-link">Habilidades</a>
+                </li>
+                <li class="apartados__lista__item">
+                    <a href="Paginas/personaje.html" class="apartados__lista-link">Personaje</a>
+                </li>
+                <li class="apartados__lista__item">
+                    <a href = "https://map.projectzomboid.com/" class="apartados__lista-link" target="_blank">Mapa-Ciudades</a>
+                </li>
+            </ul>
         </div>
-        <p>
-            <strong>Project Zomboid</strong> es un juego de supervivencia en un apocalipsis zombie realista, de mundo abierto. 
-            En este juego el jugador tiene que sobrevivir la mayor cantidad de tiempo mientras puede hacer muchas cosas 
-            que el juego nos brinda.
-        </p>
-    -->
-
-
-    <nav>
-        <h2 id="mecanicas">Mecanicas del juego</h2>
-        <ul>
-            <strong>
-            <!--Nos lleva a la otra pagina-->
-            <li><a href="Paginas/habilidades.html">Habilidades</a></li>
-            <li><a href="Paginas/personaje.html">Personaje</a></li>
-            <!-- El target="_blank" es para que se abra en una nueva pestaña-->
-            <li><a href = "https://map.projectzomboid.com/" target="_blank">Mapa-Ciudades</a></li>
-            <li>Modos de juego</li>
-            </strong>
-        </ul>
         
-        <hr>
-    
-        <h2 id="extras">Extras</h2>
-        <ul>
-            <strong>
-            <li>Mods recomendados</li>
-            <li>Opcion "Arfitrion"-"Host"</li>
-            <li><a href = "https://store.steampowered.com/app/108600/Project_Zomboid/?l=spanish">¿Donde descargarlo?</a></li>
-            <li>Actualizaciones</li>
-            </strong>
-        </ul>
-    </nav>
-    <hr>
+        <div class="apartados__item">
+            <h2 id="extras">Extras</h2>
+            <ul class="apartados__lista">
+                <li class="apartados__lista__item">
+                    <a href="" class="apartados__lista-link apartados__lista-link--desactivado">Mods recomendados</a>
+                </li>
+                <li class="apartados__lista__item">
+                    <a href="" class="apartados__lista-link apartados__lista-link--desactivado">Opcion "Arfitrion"-"Host"</a>
+                </li>
+                <li class="apartados__lista__item">
+                    <a href = "https://store.steampowered.com/app/108600/Project_Zomboid/?l=spanish" class="apartados__lista-link">¿Donde descargarlo?</a>
+                </li>
+            </ul>
+        </div>
+    </div>
 
-    <main>
+    <div class="contenido-principal">
         <h3 class="centrado">Jugabilidad</h3>
         <p>
             En Project Zomboid, el jugador tiene como objetivo sobrevivir el mayor tiempo posible en un área apocalíptica 
@@ -105,10 +98,13 @@
             permite al jugador personalizar la configuración de su partida, como la población de zombis, la transmisibilidad 
             de virus, la rareza del botín, regularidad de eventos, aparición de autos, entre otros.
         </p>
-        <!--<img class="centrado" src="imagenes/inicio/baner.jpg" alt="banerPZ" width="600px"> -->
-    </main>
+        <img class="contenido-principal__imagen entrado" src="imagenes/inicio/basePZ.jpg" alt="banerPZ" width="600px">
+    </div>
 
-    <hr>
-    <br>
+    <footer class="footer-pagina">
+        <p>Github: <a href="https://github.com/dachiri-unsa/TrabajoIDWEB">Aqui</a></p>
+        <p>Autor: Achiri Cuevas, Daniel Cooper</p>
+        <p>2025</p>
+    </footer>
 </body>
 </html>

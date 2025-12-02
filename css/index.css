@@ -1,4 +1,7 @@
-
+li {
+    list-style: none;
+    padding-left: 0;
+}
 /*----- OTROS -----*/
 .imagenPrincipal {
     display: flex;
@@ -23,4 +26,87 @@
 }
 .tituloPrincipal__imagenLogo {
     width: 40vw;
+}
+
+/* APARTADOS */
+.apartados {
+    margin: 0 auto;
+    width: 80vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.apartados__item {
+    width: 40%;
+    margin: 5%;
+    background-color: #303030;
+    border: 3px solid #800000;
+    border-radius: 10px;
+    box-shadow: 0 0 10px 2px #a00000;
+    text-align: center;
+}
+.apartados__item h2 {
+    color: #cc0000;
+    font-size: 30px;
+    font-family: 'Courier New', Courier, monospace;
+}
+.apartados__lista {
+    display: flex;
+    flex-direction: column;
+}
+.apartados__lista__item {
+    font-size: 16px;
+    text-decoration: none;
+    margin: 5px;
+}
+.apartados__lista-link {
+    display: inline-block;
+    padding: 8px 12px;
+    min-width: 70px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 1rem;
+    border-radius: 6px;
+    border: 3px solid #222;
+    background-color: #a00000;
+    color: #c8c8c8;
+    transition: all 0.08s ease;
+}
+.apartados__lista-link:hover {
+    background-color: #800000;
+    box-shadow: 0 4px 10px #0004;
+}
+.apartados__lista-link--desactivado {
+    background-color: #303030;
+    transition: none;
+}
+.apartados__lista-link--desactivado:hover {
+    background-color: #303030;
+    box-shadow: none;
+}
+.contenido-principal {
+    display: inline-block;
+    margin: 0 10% 5% 10%;
+    padding: 16px 24px;
+    width: 80%;
+    min-width: 70px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 1rem;
+    border-radius: 6px;
+    border: 3px solid #800000;
+    box-shadow: 0 0 10px 2px #a00000;
+    background-color: #303030;
+    color: #c8c8c8;
+}
+.contenido-principal h3 {
+    color: #cc0000;
+    font-size: 30px;
+    font-family: 'Courier New', Courier, monospace;
+}
+.contenido-principal p {
+    font-size: 16px;
+}
+.contenido-principal__imagen {
+    margin: 30px 30px 30px 0;
 }
