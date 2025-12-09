@@ -1,0 +1,284 @@
+/* ===== HEADER PERSONAJE ===== */
+.header-personaje {
+    margin: 40px auto;
+    max-width: 1200px;
+    padding: 0 20px;
+}
+
+.header-personaje__contenido {
+    text-align: center;
+    background: linear-gradient(135deg, #303030 0%, #202020 100%);
+    border: 3px solid #800000;
+    border-radius: 12px;
+    padding: 50px 30px;
+    box-shadow: 0 0 30px rgba(160, 0, 0, 0.4);
+    position: relative;
+    overflow: hidden;
+}
+
+.header-personaje__titulo {
+    font-size: 3rem;
+    color: #a00000;
+    margin-bottom: 15px;
+    text-shadow: 0 0 20px rgba(160, 0, 0, 0.6);
+    position: relative;
+    z-index: 1;
+}
+
+.header-personaje__descripcion {
+    font-size: 1.2rem;
+    color: #c8c8c8;
+    margin-bottom: 30px;
+    position: relative;
+    z-index: 1;
+}
+
+.header-personaje__imagen {
+    max-width: 250px;
+    height: auto;
+    filter: drop-shadow(0 0 20px rgba(160, 0, 0, 0.5));
+    transition: transform 0.3s ease;
+    position: relative;
+    z-index: 1;
+}
+
+.header-personaje__imagen:hover {
+    transform: scale(1.05);
+}
+
+/* ===== NAVEGACIÓN DE RETORNO ===== */
+.navegacion-retorno {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 0 20px;
+}
+
+.navegacion-retorno__link {
+    display: inline-block;
+    padding: 12px 24px;
+    background-color: #303030;
+    color: #c8c8c8;
+    text-decoration: none;
+    border: 2px solid #800000;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+    font-weight: 500;
+}
+
+.navegacion-retorno__link:hover {
+    background-color: #800000;
+    box-shadow: 0 0 15px rgba(160, 0, 0, 0.5);
+    transform: translateX(-5px);
+}
+
+/* ===== CONTENIDO PRINCIPAL ===== */
+.contenido-personaje {
+    max-width: 1200px;
+    margin: 40px auto 80px;
+    padding: 0 20px;
+}
+
+/* ===== SECCIONES DE CREACIÓN ===== */
+.seccion-creacion {
+    background: linear-gradient(135deg, rgba(48, 48, 48, 0.95) 0%, rgba(32, 32, 32, 0.95) 100%);
+    border: 2px solid #800000;
+    border-radius: 12px;
+    padding: 40px;
+    margin-bottom: 40px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.5);
+}
+
+.seccion-creacion__encabezado {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+    border-bottom: 2px solid #800000;
+}
+
+.seccion-creacion__numero {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #a00000;
+    background: rgba(160, 0, 0, 0.1);
+    width: 70px;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    border: 3px solid #800000;
+    box-shadow: 0 0 20px rgba(160, 0, 0, 0.4);
+}
+
+.seccion-creacion__titulo {
+    font-size: 2rem;
+    color: #a00000;
+    margin: 0;
+}
+
+.seccion-creacion__descripcion {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #c8c8c8;
+    margin-bottom: 30px;
+}
+
+.seccion-creacion__imagen-container {
+    position: relative;
+    border-radius: 8px;
+    overflow: hidden;
+    margin-top: 30px;
+    border: 2px solid #800000;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.seccion-creacion__imagen-container--mapa {
+    max-width: 800px;
+}
+
+.seccion-creacion__imagen {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.seccion-creacion__imagen-container:hover .seccion-creacion__imagen {
+    transform: scale(1.02);
+}
+
+.seccion-creacion__imagen-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(to top, rgba(160, 0, 0, 0.9), transparent);
+    padding: 15px;
+    color: #fff;
+    font-weight: bold;
+    transform: translateY(100%);
+    transition: transform 0.3s ease;
+}
+
+.seccion-creacion__imagen-container:hover .seccion-creacion__imagen-overlay {
+    transform: translateY(0);
+}
+
+/* ===== GRID DE RASGOS ===== */
+.rasgos-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+    margin: 30px 0;
+}
+
+.rasgo-card {
+    background: rgba(48, 48, 48, 0.8);
+    border: 2px solid #555;
+    border-radius: 8px;
+    padding: 25px;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.rasgo-card:hover {
+    transform: translateY(-5px);
+    border-color: #a00000;
+    box-shadow: 0 8px 25px rgba(160, 0, 0, 0.3);
+}
+
+.rasgo-card--negativo:hover {
+    border-color: #ff6b6b;
+    box-shadow: 0 8px 25px rgba(255, 107, 107, 0.3);
+}
+
+.rasgo-card--positivo:hover {
+    border-color: #51cf66;
+    box-shadow: 0 8px 25px rgba(81, 207, 102, 0.3);
+}
+
+.rasgo-card__icono {
+    font-size: 3rem;
+    margin-bottom: 15px;
+}
+
+.rasgo-card__titulo {
+    color: #a00000;
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+}
+
+.rasgo-card__descripcion {
+    color: #c8c8c8;
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+/* ===== LISTA DE CARACTERÍSTICAS ===== */
+.caracteristicas-lista {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin: 30px 0;
+}
+
+.caracteristica-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 15px;
+    background: rgba(48, 48, 48, 0.6);
+    border-radius: 6px;
+    border-left: 4px solid #800000;
+    transition: all 0.3s ease;
+}
+
+.caracteristica-item:hover {
+    background: rgba(160, 0, 0, 0.1);
+    border-left-color: #a00000;
+    transform: translateX(10px);
+}
+
+.caracteristica-item__barra {
+    width: 6px;
+    height: 30px;
+    background: linear-gradient(to bottom, #a00000, #500000);
+    border-radius: 3px;
+}
+
+.caracteristica-item__texto {
+    color: #c8c8c8;
+    font-size: 1.1rem;
+    font-weight: 500;
+}
+
+/* ===== CONSEJO ALEATORIO ===== */
+.consejo-aleatorio {
+    display: flex;
+    gap: 20px;
+    background: linear-gradient(135deg, rgba(160, 0, 0, 0.15) 0%, rgba(128, 0, 0, 0.1) 100%);
+    border: 2px solid #800000;
+    border-radius: 8px;
+    padding: 25px;
+    margin: 30px 0;
+    align-items: center;
+}
+
+.consejo-aleatorio__icono {
+    font-size: 3rem;
+    flex-shrink: 0;
+}
+
+.consejo-aleatorio__titulo {
+    color: #a00000;
+    font-size: 1.3rem;
+    margin-bottom: 8px;
+}
+
+.consejo-aleatorio__texto {
+    color: #c8c8c8;
+    line-height: 1.6;
+}

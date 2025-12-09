@@ -1,11 +1,13 @@
+<!--Autor: Daniel Cooper Achiri Cuevas-->
+<!--Curso: Introduccion al desarrollo web-->
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Habilidades PZ</title>
     <link rel="stylesheet" href="../css/main.css">
-    <link rel="stylesheet" href="../css/listas.css">
+    <link rel="stylesheet" href="../css/habilidades.css">
 </head>
 <body>
     <!-- Barra de navegacion -->
@@ -13,7 +15,7 @@
         <ul class="navegador__ul">
             <li class="navegador__item navegador__item--logo">
                 <a href="../index.html" class="navegador__logo-link">
-                    <img class="navegador__imagen" src = "../imagenes/inicio/PzLogo_Blood.png" alt = "logo pz" rel="noopener noreferrer">
+                    <img class="navegador__imagen" src="../imagenes/inicio/PzLogo_Blood.png" alt="logo pz" rel="noopener noreferrer">
                 </a>
             </li>
             <li class="navegador__item">
@@ -33,88 +35,261 @@
             </li>
         </ul>
     </div>
-    <hr>
-    <header>
-        <h1 class="titulo">Habilidades</h1>
+
+    <!-- Header Principal -->
+    <header class="header-habilidades">
+        <div class="header-habilidades__contenido">
+            <h1 class="header-habilidades__titulo">Sistema de Habilidades</h1>
+            <p class="header-habilidades__descripcion">
+                Desarrolla las capacidades de tu superviviente para aumentar tus posibilidades en el apocalipsis
+            </p>
+        </div>
     </header>
-    <!--Agregamos una forma de volver a la pagina anterior de una mejor manera-->
-    <nav>
-        <a href="../index.html">--Volver--</a>
+
+    <!-- Navegación de retorno -->
+    <nav class="navegacion-retorno">
+        <a href="../index.html" class="navegacion-retorno__link">← Volver al inicio</a>
     </nav>
-    <hr>
-    <ul>
-        <!--Agregamos las distintas habilidades del juego con una imagen referencial-->
-        <li class="sublista1"><strong>Pasivas</strong></li>
-        <ul>
-            <li>Fuerza</li>
-                <p>Se obtiene experiencia al hacer ejercicios de fuerza, cargar más del 50% la capacidad de carga, correr y golpear zombis con ataques cuerpo a cuerpo.</p>
-            <li>Estado físico</li>
-                <p>Se obtiene experiencia al ejercitarse, golpear zombis con armas cuerpo a cuerpo mientras el jugador no este cansado.</p>
-        </ul>
-        <img src = "../imagenes/habilidades/fuerza.jpg" alt = "ejercicioPZ" height="150px">
-        <hr>
 
-        <li class="sublista1"><strong>Agilidad</strong></li>
-        <ul>
-            <li>Carrera</li>
-                <p>Permite que el jugador pueda correr mas rapido y que consuma menos energia</p>
-            <li>Pies ligeros</li>
-                <p>Controla el sonido de nuestros pasos y por ende el radio en el que los zombies nos escuchan</p>
-            <li>Destreza</li>
-                <p>Controla la velocidad en la que el personaje se mueve cuando estamos en posición de combate</p>
-            <li>Sigilo</li>
-                <p>Afecta en el radio en el cual los zombies nos escuchan cuando estamos en modo siligo (agachados)</p>
-        </ul>
-        <img src = "../imagenes/habilidades/auto_PZ.jpeg" alt = "orda_zombies" height="150px">
-        <hr>
+    <!-- Contenido Principal -->
+    <main class="contenido-habilidades">
 
-        <li class="sublista1"><strong>Combate</strong></li>
-        <ul>
-            <li>Hacha</li>
-            <li>Contundente larga</li>
-            <li>Contundente corta</li>
-            <li>Hoja larga</li>
-            <li>Hoja corta</li>
-            <li>Lanza</li>
-            <li>Mantenimiento</li>
-        </ul>
-        <img src = "../imagenes/habilidades/combate.jpg" alt = "combate" height="150px">
-        <hr>
+        <!-- Categoría: Pasivas -->
+        <section class="categoria-habilidad">
+            <div class="categoria-habilidad__header">
+                <h2 class="categoria-habilidad__titulo">Habilidades Pasivas</h2>
+            </div>
+            
+            <div class="categoria-habilidad__contenido">
+                <div class="habilidades-grid">
+                    <div class="habilidad-card">
+                        <h3 class="habilidad-card__nombre">Fuerza</h3>
+                        <div class="habilidad-card__barra"></div>
+                        <p class="habilidad-card__descripcion">
+                            Se obtiene experiencia al hacer ejercicios de fuerza, cargar más del 50% la capacidad 
+                            de carga, correr y golpear zombis con ataques cuerpo a cuerpo.
+                        </p>
+                    </div>
 
-        <li class="sublista1"><strong>Fabricación</strong></li>
-        <ul>
-            <li>Carpintería</li>
-            <li>Cocinar</li>
-            <li>Electrónica</li>
-            <li>Metalisteria</li>
-            <li>Mecánica</li>
-            <li>Sastreria</li>
-            <li>Metalisteria</li>
-        </ul>
-        <img src = "../imagenes/habilidades/fabricacion.jpeg" alt = "fabricacion" height="150px">
-        <hr>
+                    <div class="habilidad-card">
+                        <h3 class="habilidad-card__nombre">Estado Físico</h3>
+                        <div class="habilidad-card__barra"></div>
+                        <p class="habilidad-card__descripcion">
+                            Se obtiene experiencia al ejercitarse y golpear zombis con armas cuerpo a cuerpo 
+                            mientras el jugador no esté cansado.
+                        </p>
+                    </div>
+                </div>
 
-        <li class="sublista1"><strong>Armas de fuego</strong></li>
-        <ul>
-            <li>Puntería</li>
-                <p>Esta habilidad controla bastantes cosas, tales como la precicion al disparar, alcance, exactitud y el tiempo de apuntado</p>
-            <li>Recarga</li>
-                <p>Afecta a la velocidad de recarga y a las probabilidades de que se atazque el arma</p>
-        </ul>
-        <img src = "../imagenes/habilidades/armas.jpeg" alt = "armas" height="150px">
-        <hr>
+                <div class="categoria-habilidad__imagen-container">
+                    <img src="../imagenes/habilidades/fuerza.jpg" alt="ejercicio" class="categoria-habilidad__imagen">
+                    <div class="categoria-habilidad__imagen-caption">Entrenamiento de fuerza</div>
+                </div>
+            </div>
+        </section>
 
-        <li class="sublista1"><strong>Supervivencia</strong></li>
-        <ul>
-            <li>Pesca</li>
-            <li>Rebuscar</li>
-            <li>Trampas</li>
-            <li>Agricultura</li>
-        </ul>
-        <img src = "../imagenes/habilidades/agricultura.jpeg" alt = "agricultura" height="150px">
-        <hr>
+        <!-- Categoría: Agilidad -->
+        <section class="categoria-habilidad">
+            <div class="categoria-habilidad__header">
+                <h2 class="categoria-habilidad__titulo">Agilidad</h2>
+            </div>
+            
+            <div class="categoria-habilidad__contenido">
+                <div class="habilidades-grid">
+                    <div class="habilidad-card">
+                        <h3 class="habilidad-card__nombre">Carrera</h3>
+                        <div class="habilidad-card__barra"></div>
+                        <p class="habilidad-card__descripcion">
+                            Permite que el jugador pueda correr más rápido y que consuma menos energía.
+                        </p>
+                    </div>
 
-    </ul>
+                    <div class="habilidad-card">
+                        <h3 class="habilidad-card__nombre">Pies Ligeros</h3>
+                        <div class="habilidad-card__barra"></div>
+                        <p class="habilidad-card__descripcion">
+                            Controla el sonido de nuestros pasos y por ende el radio en el que los zombies nos escuchan.
+                        </p>
+                    </div>
+
+                    <div class="habilidad-card">
+                        <h3 class="habilidad-card__nombre">Destreza</h3>
+                        <div class="habilidad-card__barra"></div>
+                        <p class="habilidad-card__descripcion">
+                            Controla la velocidad en la que el personaje se mueve cuando estamos en posición de combate.
+                        </p>
+                    </div>
+
+                    <div class="habilidad-card">
+                        <h3 class="habilidad-card__nombre">Sigilo</h3>
+                        <div class="habilidad-card__barra"></div>
+                        <p class="habilidad-card__descripcion">
+                            Afecta el radio en el cual los zombies nos escuchan cuando estamos en modo sigilo (agachados).
+                        </p>
+                    </div>
+                </div>
+
+                <div class="categoria-habilidad__imagen-container">
+                    <img src="../imagenes/habilidades/auto_PZ.jpeg" alt="orda zombies" class="categoria-habilidad__imagen">
+                    <div class="categoria-habilidad__imagen-caption">La agilidad es clave para escapar</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Categoría: Combate -->
+        <section class="categoria-habilidad">
+            <div class="categoria-habilidad__header">
+                <h2 class="categoria-habilidad__titulo">Combate</h2>
+            </div>
+            
+            <div class="categoria-habilidad__contenido">
+                <div class="habilidades-lista-compacta">
+                    <div class="habilidad-item-compacto">
+                        <span class="habilidad-item-compacto__bullet">●</span>
+                        <span class="habilidad-item-compacto__texto">Hacha</span>
+                    </div>
+                    <div class="habilidad-item-compacto">
+                        <span class="habilidad-item-compacto__bullet">●</span>
+                        <span class="habilidad-item-compacto__texto">Contundente Larga</span>
+                    </div>
+                    <div class="habilidad-item-compacto">
+                        <span class="habilidad-item-compacto__bullet">●</span>
+                        <span class="habilidad-item-compacto__texto">Contundente Corta</span>
+                    </div>
+                    <div class="habilidad-item-compacto">
+                        <span class="habilidad-item-compacto__bullet">●</span>
+                        <span class="habilidad-item-compacto__texto">Hoja Larga</span>
+                    </div>
+                    <div class="habilidad-item-compacto">
+                        <span class="habilidad-item-compacto__bullet">●</span>
+                        <span class="habilidad-item-compacto__texto">Hoja Corta</span>
+                    </div>
+                    <div class="habilidad-item-compacto">
+                        <span class="habilidad-item-compacto__bullet">●</span>
+                        <span class="habilidad-item-compacto__texto">Lanza</span>
+                    </div>
+                    <div class="habilidad-item-compacto">
+                        <span class="habilidad-item-compacto__bullet">●</span>
+                        <span class="habilidad-item-compacto__texto">Mantenimiento</span>
+                    </div>
+                </div>
+
+                <div class="categoria-habilidad__imagen-container">
+                    <img src="../imagenes/habilidades/combate.jpg" alt="combate" class="categoria-habilidad__imagen">
+                    <div class="categoria-habilidad__imagen-caption">Maestría en diferentes tipos de armas</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Categoría: Fabricación -->
+        <section class="categoria-habilidad">
+            <div class="categoria-habilidad__header">
+                <h2 class="categoria-habilidad__titulo">Fabricación</h2>
+            </div>
+            
+            <div class="categoria-habilidad__contenido">
+                <div class="habilidades-lista-compacta">
+                    <div class="habilidad-item-compacto">
+                        <span class="habilidad-item-compacto__bullet">●</span>
+                        <span class="habilidad-item-compacto__texto">Carpintería</span>
+                    </div>
+                    <div class="habilidad-item-compacto">
+                        <span class="habilidad-item-compacto__bullet">●</span>
+                        <span class="habilidad-item-compacto__texto">Cocinar</span>
+                    </div>
+                    <div class="habilidad-item-compacto">
+                        <span class="habilidad-item-compacto__bullet">●</span>
+                        <span class="habilidad-item-compacto__texto">Electrónica</span>
+                    </div>
+                    <div class="habilidad-item-compacto">
+                        <span class="habilidad-item-compacto__bullet">●</span>
+                        <span class="habilidad-item-compacto__texto">Metalisterìa</span>
+                    </div>
+                    <div class="habilidad-item-compacto">
+                        <span class="habilidad-item-compacto__bullet">●</span>
+                        <span class="habilidad-item-compacto__texto">Mecánica</span>
+                    </div>
+                    <div class="habilidad-item-compacto">
+                        <span class="habilidad-item-compacto__bullet">●</span>
+                        <span class="habilidad-item-compacto__texto">Sastrería</span>
+                    </div>
+                </div>
+
+                <div class="categoria-habilidad__imagen-container">
+                    <img src="../imagenes/habilidades/fabricacion.jpeg" alt="fabricación" class="categoria-habilidad__imagen">
+                    <div class="categoria-habilidad__imagen-caption">Habilidades esenciales para sobrevivir</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Categoría: Armas de Fuego -->
+        <section class="categoria-habilidad">
+            <div class="categoria-habilidad__header">
+                <h2 class="categoria-habilidad__titulo">Armas de Fuego</h2>
+            </div>
+            
+            <div class="categoria-habilidad__contenido">
+                <div class="habilidades-grid">
+                    <div class="habilidad-card">
+                        <h3 class="habilidad-card__nombre">Puntería</h3>
+                        <div class="habilidad-card__barra"></div>
+                        <p class="habilidad-card__descripcion">
+                            Esta habilidad controla bastantes cosas, tales como la precisión al disparar, 
+                            alcance, exactitud y el tiempo de apuntado.
+                        </p>
+                    </div>
+
+                    <div class="habilidad-card">
+                        <h3 class="habilidad-card__nombre">Recarga</h3>
+                        <div class="habilidad-card__barra"></div>
+                        <p class="habilidad-card__descripcion">
+                            Afecta a la velocidad de recarga y a las probabilidades de que se atasque el arma.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="categoria-habilidad__imagen-container">
+                    <img src="../imagenes/habilidades/armas.jpeg" alt="armas" class="categoria-habilidad__imagen">
+                    <div class="categoria-habilidad__imagen-caption">Dominio de armas de fuego</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Categoría: Supervivencia -->
+        <section class="categoria-habilidad">
+            <div class="categoria-habilidad__header">
+                <h2 class="categoria-habilidad__titulo">Supervivencia</h2>
+            </div>
+            
+            <div class="categoria-habilidad__contenido">
+                <div class="habilidades-lista-compacta">
+                    <div class="habilidad-item-compacto">
+                        <span class="habilidad-item-compacto__bullet">●</span>
+                        <span class="habilidad-item-compacto__texto">Pesca</span>
+                    </div>
+                    <div class="habilidad-item-compacto">
+                        <span class="habilidad-item-compacto__bullet">●</span>
+                        <span class="habilidad-item-compacto__texto">Rebuscar</span>
+                    </div>
+                    <div class="habilidad-item-compacto">
+                        <span class="habilidad-item-compacto__bullet">●</span>
+                        <span class="habilidad-item-compacto__texto">Trampas</span>
+                    </div>
+                    <div class="habilidad-item-compacto">
+                        <span class="habilidad-item-compacto__bullet">●</span>
+                        <span class="habilidad-item-compacto__texto">Agricultura</span>
+                    </div>
+                </div>
+
+                <div class="categoria-habilidad__imagen-container">
+                    <img src="../imagenes/habilidades/agricultura.jpeg" alt="agricultura" class="categoria-habilidad__imagen">
+                    <div class="categoria-habilidad__imagen-caption">Recursos naturales para sobrevivir</div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
     <footer class="footer-pagina">
         <p>Github: <a href="https://github.com/dachiri-unsa/TrabajoIDWEB">Aqui</a></p>
         <p>Autor: Achiri Cuevas, Daniel Cooper</p>

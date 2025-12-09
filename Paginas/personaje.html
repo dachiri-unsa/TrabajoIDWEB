@@ -1,11 +1,13 @@
+<!--Autor: Daniel Cooper Achiri Cuevas-->
+<!--Curso: Introduccion al desarrollo web-->
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Personaje PZ</title>
     <link rel="stylesheet" href="../css/main.css">
-    <link rel="stylesheet" href="../css/listas.css">
+    <link rel="stylesheet" href="../css/personajes.css">
 </head>
 <body>
     <!-- Barra de navegacion -->
@@ -13,7 +15,7 @@
         <ul class="navegador__ul">
             <li class="navegador__item navegador__item--logo">
                 <a href="../index.html" class="navegador__logo-link">
-                    <img class="navegador__imagen" src = "../imagenes/inicio/PzLogo_Blood.png" alt = "logo pz" rel="noopener noreferrer">
+                    <img class="navegador__imagen" src="../imagenes/inicio/PzLogo_Blood.png" alt="logo pz" rel="noopener noreferrer">
                 </a>
             </li>
             <li class="navegador__item">
@@ -34,48 +36,150 @@
         </ul>
     </div>
 
-    <hr>
-    <header>
-        <h1 class="titulo">Personaje</h1>
-        <img src="../imagenes/personaje/Player.png" alt="ejm personaje" width="250">
+    <!-- Header Principal -->
+    <header class="header-personaje">
+        <div class="header-personaje__contenido">
+            <h1 class="header-personaje__titulo">Creación de Personaje</h1>
+            <p class="header-personaje__descripcion">
+                Personaliza tu superviviente y prepárate para el apocalipsis zombie
+            </p>
+            <img src="../imagenes/personaje/Player.png" alt="ejemplo personaje" class="header-personaje__imagen">
+        </div>
     </header>
-    <!--Agregamos una forma de volver a la pagina anterior de una mejor manera-->
-    <nav>
-        <a href="../index.html">--Volver--</a>
+
+    <!-- Navegación de retorno -->
+    <nav class="navegacion-retorno">
+        <a href="../index.html" class="navegacion-retorno__link">← Volver al inicio</a>
     </nav>
-    <hr>
 
-    <h2 class="titulo">Creacion de personaje</h2>
-    <ol>
-        <li class="sublista1"><strong>Ubicacion inicial</strong></li>
-        <p>En este apartado nosotros elejimos la ciudad donde queremos aparecer</p>
-        <img src="../imagenes/personaje/mapa_inicio.png" alt="mapa inicio" width="800px">
-        <hr>
+    <!-- Contenido Principal -->
+    <main class="contenido-personaje">
+        
+        <!-- Sección 1: Ubicación Inicial -->
+        <section class="seccion-creacion">
+            <div class="seccion-creacion__encabezado">
+                <span class="seccion-creacion__numero">01</span>
+                <h2 class="seccion-creacion__titulo">Ubicación Inicial</h2>
+            </div>
+            <div class="seccion-creacion__contenido">
+                <p class="seccion-creacion__descripcion">
+                    El primer paso es elegir dónde comenzará tu historia de supervivencia. Knox Country 
+                    ofrece varias ciudades con diferentes niveles de dificultad y recursos disponibles. 
+                    Cada ubicación presenta sus propios desafíos y oportunidades.
+                </p>
+                <div class="seccion-creacion__imagen-container seccion-creacion__imagen-container--mapa">
+                    <img src="../imagenes/personaje/mapa_inicio.png" alt="mapa de inicio" class="seccion-creacion__imagen">
+                    <div class="seccion-creacion__imagen-overlay">
+                        <span>Mapa de Knox Country</span>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-        <li class="sublista1"><strong>Rasgos</strong></li>
-        <p>Seguidamente podemos escoger las estadisticas les personaje, tales como:</p>
-        <ul>
-            <li>Profecion</li>
-            <li>Rasgos negativos</li>
-            <li>Rasgos positivos</li>
-        </ul>
-        <img src="../imagenes/personaje/Rasgos.jpeg" alt="Rasgos pantalla" width="800px">
-        <hr>
+        <!-- Sección 2: Rasgos -->
+        <section class="seccion-creacion">
+            <div class="seccion-creacion__encabezado">
+                <span class="seccion-creacion__numero">02</span>
+                <h2 class="seccion-creacion__titulo">Rasgos y Profesión</h2>
+            </div>
+            <div class="seccion-creacion__contenido">
+                <p class="seccion-creacion__descripcion">
+                    Define las fortalezas y debilidades de tu personaje. Cada decisión afectará tu 
+                    experiencia de juego y tus posibilidades de supervivencia a largo plazo.
+                </p>
+                
+                <div class="rasgos-grid">
+                    <div class="rasgo-card">
+                        <div class="rasgo-card__icono">💼</div>
+                        <h3 class="rasgo-card__titulo">Profesión</h3>
+                        <p class="rasgo-card__descripcion">
+                            Determina tus habilidades iniciales y conocimientos especializados.
+                        </p>
+                    </div>
+                    
+                    <div class="rasgo-card rasgo-card--negativo">
+                        <div class="rasgo-card__icono">⚠️</div>
+                        <h3 class="rasgo-card__titulo">Rasgos Negativos</h3>
+                        <p class="rasgo-card__descripcion">
+                            Desventajas que otorgan puntos adicionales para invertir en otros aspectos.
+                        </p>
+                    </div>
+                    
+                    <div class="rasgo-card rasgo-card--positivo">
+                        <div class="rasgo-card__icono">✓</div>
+                        <h3 class="rasgo-card__titulo">Rasgos Positivos</h3>
+                        <p class="rasgo-card__descripcion">
+                            Ventajas que mejoran las capacidades de tu personaje.
+                        </p>
+                    </div>
+                </div>
 
-        <li class="sublista1"><strong>Construccion del personaje</strong></li>
-        <p>Despues de haber realizado los anteriores pasos, podremos escoger las siguientes caracteristicas de nuestro personaje</p>
-        <ul>
-            <li>Apariencia</li>
-            <li>Nombres y apellidos</li>
-            <li>Sexo</li>
-            <li>Ropa</li>
-            <li>Color de piel y de cabello</li>
-        </ul>
-        <p>Tambien podremos escoger la opcion "Aleatorio" para que el propio juego escoja estas caracteristicas aleatoriamente</p>
-        <img src="../imagenes/personaje/Caracteristicas.jpg" alt="caracteristicas del personaje" width="800px">
-        <hr>
-    </ol>
-    
+                <div class="seccion-creacion__imagen-container">
+                    <img src="../imagenes/personaje/Rasgos.jpeg" alt="pantalla de rasgos" class="seccion-creacion__imagen">
+                    <div class="seccion-creacion__imagen-overlay">
+                        <span>Sistema de Rasgos</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección 3: Construcción del Personaje -->
+        <section class="seccion-creacion">
+            <div class="seccion-creacion__encabezado">
+                <span class="seccion-creacion__numero">03</span>
+                <h2 class="seccion-creacion__titulo">Personalización</h2>
+            </div>
+            <div class="seccion-creacion__contenido">
+                <p class="seccion-creacion__descripcion">
+                    Dale vida a tu superviviente personalizando su apariencia física y características 
+                    visuales. Cada detalle cuenta para hacer único tu personaje.
+                </p>
+                
+                <div class="caracteristicas-lista">
+                    <div class="caracteristica-item">
+                        <div class="caracteristica-item__barra"></div>
+                        <span class="caracteristica-item__texto">Apariencia facial</span>
+                    </div>
+                    <div class="caracteristica-item">
+                        <div class="caracteristica-item__barra"></div>
+                        <span class="caracteristica-item__texto">Nombres y apellidos</span>
+                    </div>
+                    <div class="caracteristica-item">
+                        <div class="caracteristica-item__barra"></div>
+                        <span class="caracteristica-item__texto">Género del personaje</span>
+                    </div>
+                    <div class="caracteristica-item">
+                        <div class="caracteristica-item__barra"></div>
+                        <span class="caracteristica-item__texto">Vestimenta inicial</span>
+                    </div>
+                    <div class="caracteristica-item">
+                        <div class="caracteristica-item__barra"></div>
+                        <span class="caracteristica-item__texto">Colores de piel y cabello</span>
+                    </div>
+                </div>
+
+                <div class="consejo-aleatorio">
+                    <div class="consejo-aleatorio__icono">🎲</div>
+                    <div class="consejo-aleatorio__contenido">
+                        <h4 class="consejo-aleatorio__titulo">Modo Aleatorio</h4>
+                        <p class="consejo-aleatorio__texto">
+                            Si prefieres comenzar rápidamente, puedes usar la opción "Aleatorio" 
+                            para que el juego genere todas estas características automáticamente.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="seccion-creacion__imagen-container">
+                    <img src="../imagenes/personaje/Caracteristicas.jpg" alt="características del personaje" class="seccion-creacion__imagen">
+                    <div class="seccion-creacion__imagen-overlay">
+                        <span>Editor de Apariencia</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
     <footer class="footer-pagina">
         <p>Github: <a href="https://github.com/dachiri-unsa/TrabajoIDWEB">Aqui</a></p>
         <p>Autor: Achiri Cuevas, Daniel Cooper</p>
