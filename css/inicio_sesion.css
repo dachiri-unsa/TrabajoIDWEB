@@ -22,7 +22,7 @@ header {
     padding: 8px 24px;
     margin: 16px auto;
     color: #cccccc;
-    border: #555555 solid 1px;
+    border: #a50000 solid 3px;
     border-radius: 10px;
     font-size: 18px;
     text-decoration: none;
@@ -32,7 +32,6 @@ header {
     background-color: #4a4a4a;
     transform: translateY(-2px);
     box-shadow: 0 6px 20px #1a1a1a;
-
 }
 .titulo {
     text-align: center;
