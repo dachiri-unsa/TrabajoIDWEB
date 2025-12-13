@@ -8,36 +8,33 @@
 </head>
 <body>
     <header>
-        <a class="botonVolver" href="../index.html">Volver</a>
+        <a class="botonVolver" href="../index.html">Volver menu principal</a>
         <h1 class="titulo">Inicio de sesion</h1>
     </header>
     <div class="contenedorFormulario">
         <form class="contenedorFormulario__formulario" action="#" method="post">
             <div class="formulario__texto">
-                <label for="nombre">Nombres completos</label>
-                <input type="text" name="nombre" id="nombre" placeholder="Ej: Juan Pérez" required>
+                <label for="correo">Correo electrónico</label>
+                <input type="text" name="correo" id="correo" placeholder="correo@ejemplo.com">
             </div>
 
             <div class="formulario__texto">
-                <label for="correo">Correo electrónico</label>
-                <input type="email" name="correo" id="correo" placeholder="correo@ejemplo.com" required>
+                <label for="contrasenia">Contraseña</label>
+                <input type="password" name="contrasenia" id="contrasenia" placeholder="Ingrese su contraseña">
             </div>
 
-            <div class="checkbox-group">
-                <input type="checkbox" id="terminos" required>
-                <label for="terminos">Acepto los términos y condiciones</label>
-            </div>
-
-            <div class="checkbox-group">
-                <input type="checkbox" id="correos_recibidos">
-                <label for="correos_recibidos">Acepto recibir correos sobre información nueva publicada</label>
-            </div>
+            <div id="contenedor_error"></div>
 
             <div class="button-group">
-                <button type="submit">Registrarme</button>
+                <button type="submit">Iniciar Sesión</button>
                 <button type="reset">Cancelar</button>
             </div>
         </form>
     </div>
+
+    <div class="contendorAdicional">
+        <div>¿Aun no tienes cuenta? <a href="registrarse.html">Registrarse</a></div>
+    </div>
+    <script src="../javascript/inicio_sesion.js"></script>
 </body>
 </html>

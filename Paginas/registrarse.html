@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registrarse</title>
+    <link rel="stylesheet" href="../css/inicio_sesion.css">
+</head>
+<body>
+    <header>
+        <a class="botonVolver" href="../index.html">Volver menu principal</a>
+        <h1 class="titulo">Registrarse</h1>
+    </header>
+    <div class="contenedorFormulario">
+        <form class="contenedorFormulario__formulario" action="#" method="post">
+            <div class="formulario__texto">
+                <label for="nombre">Nombre de Usuario</label>
+                <input type="text" name="nombre" id="nombre" placeholder="Ej: Juan Pérez" required>
+            </div>
+
+            <div class="formulario__texto">
+                <label for="correo">Correo electrónico</label>
+                <input type="email" name="correo" id="correo" placeholder="correo@ejemplo.com" required>
+            </div>
+
+            <div class="formulario__texto">
+                <label for="contrasenia">Contraseña</label>
+                <input type="password" name="contrasenia" id="contrasenia" placeholder="Ingrese su contraseña" required>
+            </div>
+            <div class="formulario__texto">
+                <label for="conf_contrasenia">Confirmar contraseña</label>
+                <input type="password" name="conf_contrasenia" id="conf_contrasenia" placeholder="*********" required>
+            </div>
+
+            <div class="checkbox-group">
+                <input type="checkbox" id="terminos" required>
+                <label for="terminos">Acepto los términos y condiciones</label>
+            </div>
+
+            <div class="checkbox-group">
+                <input type="checkbox" id="correos_recibidos">
+                <label for="correos_recibidos">Acepto recibir correos sobre información nueva publicada</label>
+            </div>
+
+            <div class="button-group">
+                <button type="submit">Registrarse</button>
+                <button type="reset">Cancelar</button>
+            </div>
+        </form>
+    </div>
+    <div class="contendorAdicional">
+        <div>¿Ya tienes una cuenta? <a href="inicio_sesion.html">Iniciar Sesion</a></div>
+    </div>
+</body>
+</html>

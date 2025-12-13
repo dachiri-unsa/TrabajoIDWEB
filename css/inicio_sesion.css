@@ -26,6 +26,13 @@ header {
     border-radius: 10px;
     font-size: 18px;
     text-decoration: none;
+    transition: all 0.3s ease;
+}
+.botonVolver:hover {
+    background-color: #4a4a4a;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px #1a1a1a;
+
 }
 .titulo {
     text-align: center;
@@ -64,7 +71,8 @@ label {
 }
 
 input[type="text"],
-input[type="email"] {
+input[type="email"],
+input[type="password"] {
     width: 100%;
     padding: 14px 16px;
     border-radius: 12px;
@@ -76,7 +84,8 @@ input[type="email"] {
 }
 
 input[type="text"]:focus,
-input[type="email"]:focus {
+input[type="email"]:focus,
+input[type="password"]:focus {
     outline: none;
     border-color: #ff3333;
     background: #252525;
@@ -84,7 +93,8 @@ input[type="email"]:focus {
 }
 
 input[type="text"]::placeholder,
-input[type="email"]::placeholder {
+input[type="email"]::placeholder,
+input[type="password"]::placeholder {
     color: #666666;
 }
 
@@ -151,4 +161,32 @@ button[type="reset"]:hover {
     background: #4a4a4a;
     transform: translateY(-2px);
     border-color: #666666;
+}
+
+.contenedor_error {
+    background: linear-gradient(#b60000 0%, #990000 100%);
+    color: white;
+    padding: 18px 28px;
+    border-radius: 6px;
+    box-shadow:
+        0 15px 40px rgba(0, 0, 0, 0.6),
+        0 0 30px rgba(204, 0, 0, 0.2);
+    border: 2px solid #252525;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    pointer-events: none;
+    transition: opacity 0.3s, transform 0.3s;
+}
+
+.contendorAdicional {
+    margin: 20px;
+    padding: 30px;
+    width: 100%;
+    max-width: 480px;
+    background: linear-gradient(#2a2a2a, #1f1f1f);
+    color: #cccccc;
+    border: 2px solid #cc0000;
+    border-radius: 20px;
+    box-shadow:
+        0 15px 40px rgba(0, 0, 0, 0.6),
+        0 0 30px rgba(204, 0, 0, 0.2);
 }
