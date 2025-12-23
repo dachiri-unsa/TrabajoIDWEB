@@ -28,7 +28,7 @@ li {
     width: 40vw;
 }
 
-/* APARTADOS */
+/* ----- APARTADOS ------ */
 .apartados {
     margin: 0 auto;
     width: 80vw;
@@ -109,4 +109,27 @@ li {
 }
 .contenido-principal__imagen {
     margin: 30px 30px 30px 0;
+}
+
+/* ----- NOTIFICACION ----- */
+#notificaciones {
+    position: fixed;
+    top: 80px;
+    right: 20px;
+    z-index: 9999;
+}
+.notificacion {
+    background-color: #a00000;
+    color: white;
+    padding: 15px 20px;
+    margin-top: 10px;
+    border-radius: 5px;
+    box-shadow: 0px 4px 6px rgba(0,0,0,0.2);
+    opacity: 0;
+    transform: translateX(100%);
+    transition: all 0.5s ease;
+}
+.notificacion.mostrar {
+    opacity: 1;
+    transform: translateX(0);
 }
