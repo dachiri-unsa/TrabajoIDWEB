@@ -42,7 +42,7 @@ def handle_api(environ, start_response):
                 "nombre": nombre,
                 "email": email
             }
-            crear_usuario(nombre, email, password, recibir_correos)
+            crear_usuario(email, nombre, password, recibir_correos)
 
             return response_json(start_response, "201 Created", {
                 "mensaje": "Usuario registrado exitosamente",
@@ -60,6 +60,11 @@ def handle_api(environ, start_response):
             password = data.get("password")
             usuario = leer_usuario(email)
 
+            if usuario is None:
+                return response_json(start_response, "401 Unauthorized", {
+                    "mensaje": "Correo o contraseña incorrectos"
+                })
+
             if usuario and usuario['contrasenia'] == password:
                 return response_json(start_response, "200 OK", {
                     "mensaje": "Inicio de sesión exitoso",
@@ -74,15 +79,6 @@ def handle_api(environ, start_response):
                 })
         except Exception as e:
             return response_json(start_response, "500 Internal Error", {"mensaje": str(e)})
-    if path.startswith("/api/verificar") and method == "GET":
-        query = parse_qs(environ.get('QUERY_STRING', ''))
-        email = query.get('email', [None])[0]
-
-        usuario = leer_usuario(email)
-        if usuario:
-            return response_json(start_response, "200 OK", {"status": "valido"})
-        else:
-            return response_json(start_response, "404 Not Found", {"status": "invalido"})
         
     return response_json(start_response, "404 Not Found", {"mensaje": "API no encontrado"})
 

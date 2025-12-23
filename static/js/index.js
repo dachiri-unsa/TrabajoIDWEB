@@ -25,31 +25,36 @@ Array.from(botonesNoDisponibles).forEach(boton => {
     });
 });
 
-
+const elementosInvitado = document.querySelectorAll(".auth-invitado");
+const elementosUsuario = document.querySelectorAll(".auth-usuario");
+const nombreDisplay = document.getElementById("nombre_usuario");
 // VERIFICAR SESION Y AJUSTAR INTERFAZ
 document.addEventListener("DOMContentLoaded", async () => {
     const sesion = localStorage.getItem("usuarioSesion");
     
     if (sesion) {
         const usuario = JSON.parse(sesion);
+        // 1. Ocultamos los botones de Login/Registro
+        elementosInvitado.forEach(el => el.style.setProperty("display", "none", "important"));
+        
+        // 2. Mostramos los de Usuario
+        elementosUsuario.forEach(el => el.style.setProperty("display", "block", "important"));
+        
+        // 3. Escribimos el nombre
+        if (nombreDisplay) nombreDisplay.textContent = usuario.nombre;
+    } 
+    else {
+        // Si no hay sesión, nos aseguramos de que se vea el login
+        elementosInvitado.forEach(el => el.style.display = "block");
+        elementosUsuario.forEach(el => el.style.display = "none");
+    }
 
-        // --- VALIDACIÓN ADICIONAL (Opcional pero recomendada) ---
-        try {
-            const response = await fetch(`/api/verificar?email=${usuario.email}`);
-            if (!response.ok) {
-                // Si el servidor dice que el usuario ya no existe
-                localStorage.removeItem("usuarioSesion");
-                window.location.reload();
-                return;
-            }
-            
-            // Si existe, actualizamos la UI
-            document.querySelectorAll(".auth-invitado").forEach(el => el.style.display = "none");
-            document.querySelectorAll(".auth-usuario").forEach(el => el.style.display = "block");
-            document.getElementById("nombre_usuario").textContent = usuario.nombre;
-
-        } catch (error) {
-            console.error("Error validando sesión");
-        }
+    const btnLogout = document.getElementById("btn_logout");
+    if (btnLogout) {
+        btnLogout.addEventListener("click", (e) => {
+            e.preventDefault();
+            localStorage.removeItem("usuarioSesion");
+            window.location.href = "/index"; // Al recargar, el script volverá a ejecutarse y mostrará el login
+        });
     }
 });
