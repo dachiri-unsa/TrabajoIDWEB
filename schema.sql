@@ -1,0 +1,11 @@
+CREATE DATABASE BD_IDWEB_individual;
+
+USE BD_IDWEB_individual;
+CREATE TABLE usuario (
+    id_usuario INT AUTO_INCREMENT PRIMARY KEY,
+    gmail VARCHAR(255) NOT NULL UNIQUE,
+    nombre VARCHAR(100) NOT NULL,
+    contrasenia VARCHAR(255) NOT NULL,
+    recibir_correos BOOLEAN NOT NULL DEFAULT FALSE,
+    fecha_creacion TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
