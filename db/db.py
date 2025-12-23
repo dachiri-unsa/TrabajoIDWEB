@@ -1,11 +1,17 @@
 import mysql.connector
+# Usando variables de entorno
+import os
+DB_HOST = os.getenv('DB_HOST', 'localhost')
+DB_USER = os.getenv('DB_USER', 'root')
+DB_PASS = os.getenv('DB_PASS', '1234')
+DB_NAME = os.getenv('DB_NAME', 'BD_IDWEB_individual')
 
 def get_conexion():
     conexion = mysql.connector.connect(
-        host="localhost",
-        user="root",
-        password="1234",
-        database="BD_IDWEB_individual"
+        host=DB_HOST,
+        user=DB_USER,
+        password=DB_PASS,
+        database=DB_NAME
     )
     return conexion
 
