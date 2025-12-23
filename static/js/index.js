@@ -24,3 +24,32 @@ Array.from(botonesNoDisponibles).forEach(boton => {
         mostrarNotificacion('Esta opcion aún no está disponible.');
     });
 });
+
+
+// VERIFICAR SESION Y AJUSTAR INTERFAZ
+document.addEventListener("DOMContentLoaded", async () => {
+    const sesion = localStorage.getItem("usuarioSesion");
+    
+    if (sesion) {
+        const usuario = JSON.parse(sesion);
+
+        // --- VALIDACIÓN ADICIONAL (Opcional pero recomendada) ---
+        try {
+            const response = await fetch(`/api/verificar?email=${usuario.email}`);
+            if (!response.ok) {
+                // Si el servidor dice que el usuario ya no existe
+                localStorage.removeItem("usuarioSesion");
+                window.location.reload();
+                return;
+            }
+            
+            // Si existe, actualizamos la UI
+            document.querySelectorAll(".auth-invitado").forEach(el => el.style.display = "none");
+            document.querySelectorAll(".auth-usuario").forEach(el => el.style.display = "block");
+            document.getElementById("nombre_usuario").textContent = usuario.nombre;
+
+        } catch (error) {
+            console.error("Error validando sesión");
+        }
+    }
+});

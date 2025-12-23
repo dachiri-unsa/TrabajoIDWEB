@@ -15,7 +15,7 @@
         <ul class="navegador__ul">
             <li class="navegador__item navegador__item--logo">
                 <a href="/index" class="navegador__logo-link">
-                    <img class="navegador__imagen" src = "/static/img/inicio/PzLogo_Blood.png" alt = "logo pz" rel="noopener noreferrer">
+                    <img class="navegador__imagen" src="/static/img/inicio/PzLogo_Blood.png" alt="logo pz">
                 </a>
             </li>
             <li class="navegador__item">
@@ -30,11 +30,18 @@
 
             <li class="navegador__item navegador__item--espaciador"></li>
 
-            <li class="navegador__item">
+            <li class="navegador__item auth-invitado">
                 <a href="/registrarse" class="navegador__link link--login">Registrarse</a>
             </li>
-            <li class="navegador__item">
+            <li class="navegador__item auth-invitado">
                 <a href="/inicio_sesion" class="navegador__link link--login">Inicio sesion</a>
+            </li>
+
+            <li class="navegador__item auth-usuario" style="display: none;">
+                <span id="nombre_usuario" class="navegador__link" style="color: #ff4444;"></span>
+            </li>
+            <li class="navegador__item auth-usuario" style="display: none;">
+                <a href="#" id="btn_logout" class="navegador__link link--login">Salir</a>
             </li>
         </ul>
     </div>

@@ -6,6 +6,7 @@ const inputs = {
     password: document.getElementById("contrasenia"),
     confirmPassword: document.getElementById("conf_contrasenia"),
     terminos: document.getElementById("terminos"),
+    recibir_correos: document.getElementById("correos_recibidos")
 };
 const contenedorError = document.getElementById("contenedor_error");
 const btnRegistrar = document.getElementById("btn_registrar");
@@ -96,7 +97,6 @@ const inicializarTogglesPassword = () => {
     });
 };
 
-
 // EVENTOS
 // Barra de fuerza
 inputs.password.addEventListener("input", (e) => {
@@ -113,41 +113,31 @@ formulario.addEventListener("submit", async (e) => {
         mostrarError(error);
         return;
     }
-    // ENVIO BACKEND
-    /*
     try {
-        const response = await fetch("http://localhost:8000/registro", {
+        // Deshabilitar boton
+        btnRegistrar.disabled = true;
+        btnRegistrar.textContent = "Registrando...";
+        const response = await fetch("/api/registro", {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify({
                 nombre: inputs.nombre.value,
                 email: inputs.email.value,
-                password: inputs.password.value
+                password: inputs.password.value,
+                recibir_correos: inputs.recibir_correos.checked
             })
         });
-
         const data = await response.json();
-
         if (!response.ok) {
-            mostrarError(data.mensaje);
-            return;
+            throw new Error(data.mensaje || "Error al registrar");
         }
+        localStorage.setItem("usuarioSesion", JSON.stringify(data.usuario));
+        window.location.href = "/index";
 
     } catch (err) {
-        mostrarError("Error de conexión con el servidor");
-        return;
-    }
-    */
-    // SIMULACION DE ENVÍO
-    btnRegistrar.disabled = true;
-    const textoOriginal = btnRegistrar.textContent;
-    btnRegistrar.textContent = "Registrando...";
-
-    setTimeout(() => {
+        mostrarError(err.message);
+    } finally {
         btnRegistrar.disabled = false;
-        btnRegistrar.textContent = textoOriginal;
-        formulario.reset();
-        actualizarBarraFuerza("");
-        alert("Registro simulado completado");
-    }, 2000);
+        btnRegistrar.textContent = "Registrarse";
+    }
 });

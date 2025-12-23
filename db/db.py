@@ -5,7 +5,7 @@ def get_conexion():
         host="localhost",
         user="root",
         password="1234",
-        database="BD_IDWEB_grupal"
+        database="BD_IDWEB_individual"
     )
     return conexion
 
@@ -37,7 +37,7 @@ def leer_usuario(gmail):
         usuario = cursor.fetchone()
 
         if usuario is None:
-            raise Exception(f"No existe usuario con gmail {gmail}")
+            return None
 
         return usuario
     except Exception as e:
