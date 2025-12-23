@@ -5,7 +5,7 @@
 }
 
 body {
-    background: url(../imagenes/inicio/banner_mejorado.jpg) center -30%/cover no-repeat fixed #000;
+    background: url(/static/img/inicio/banner_mejorado.jpg) center -30%/cover no-repeat fixed #000;
 }
 .titulo {
     color: #a00000;

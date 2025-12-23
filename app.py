@@ -37,9 +37,9 @@ def application(environ, start_response):
         "/": "index.html",
         "/index": "index.html",
         "/habilidades": "habilidades.html",
-        "/personaje.html": "personaje.html",
+        "/personaje": "personaje.html",
         "/inicio_sesion": "inicio_sesion.html",
-        "/registro": "registro.html",
+        "/registrarse": "registrarse.html",
     }
 
     if path in routes:
