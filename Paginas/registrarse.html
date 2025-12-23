@@ -11,7 +11,7 @@
         <h1 class="titulo">Registrarse</h1>
     </header>
     <div class="contenedorFormulario">
-        <form class="contenedorFormulario__formulario">
+        <form id="form_registro" class="contenedorFormulario__formulario">
             <div class="formulario__texto">
                 <label for="nombre">Nombre de Usuario</label>
                 <input type="text" name="nombre" id="nombre" placeholder="Ej: Juan Pérez">
@@ -22,13 +22,21 @@
                 <input type="email" name="correo" id="correo" placeholder="correo@ejemplo.com">
             </div>
             
-            <div class="formulario__texto">
+            <div class="formulario__texto password-field">
                 <label for="contrasenia">Contraseña</label>
                 <input type="password" name="contrasenia" id="contrasenia" placeholder="Ingrese su contraseña">
+                <button type="button" class="toggle-pass" data-target="contrasenia" aria-label="Mostrar contraseña">Mostrar</button>
+
+                <!-- medidor: track + fill, y etiqueta debajo -->
+                <div class="password-strength" aria-hidden="true">
+                    <div class="password-strength__fill" id="password_strength_fill"></div>
+                </div>
+                <div class="password-strength-label" id="password_strength_label" aria-hidden="true"></div>
             </div>
-            <div class="formulario__texto">
+            <div class="formulario__texto password-field">
                 <label for="conf_contrasenia">Confirmar contraseña</label>
                 <input type="password" name="conf_contrasenia" id="conf_contrasenia" placeholder="Vuelva a ingresar su contraseña">
+                <button type="button" class="toggle-pass" data-target="conf_contrasenia" aria-label="Mostrar contraseña">Mostrar</button>
             </div>
             
             <div class="checkbox-group">
@@ -44,7 +52,7 @@
             <div id="contenedor_error"></div>
 
             <div class="button-group">
-                <button type="submit">Registrarse</button>
+                <button id="btn_registrar" type="submit">Registrarse</button>
                 <button type="reset">Cancelar</button>
             </div>
         </form>

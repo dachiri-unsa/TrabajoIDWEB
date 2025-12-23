@@ -1,5 +1,5 @@
+// REFERENCIAS AL DOM
 const formulario = document.querySelector(".contenedorFormulario__formulario");
-
 const inputs = {
     nombre: document.getElementById("nombre"),
     email: document.getElementById("correo"),
@@ -7,19 +7,22 @@ const inputs = {
     confirmPassword: document.getElementById("conf_contrasenia"),
     terminos: document.getElementById("terminos"),
 };
+const contenedorError = document.getElementById("contenedor_error");
+const btnRegistrar = document.getElementById("btn_registrar");
+const strengthFill = document.getElementById("password_strength_fill");
+const strengthLabel = document.getElementById("password_strength_label");
 
-const contenedor_error = document.getElementById("contenedor_error");
-
+// MANEJO DE ERRORES
 const mostrarError = (mensaje) => {
-    contenedor_error.textContent = mensaje;
-    contenedor_error.classList.add("contenedor_error");
+    contenedorError.textContent = mensaje;
+    contenedorError.classList.add("contenedor_error");
 };
-
 const limpiarError = () => {
-    contenedor_error.textContent = "";
-    contenedor_error.classList.remove("contenedor_error");
+    contenedorError.textContent = "";
+    contenedorError.classList.remove("contenedor_error");
 };
 
+// VALIDACIÓN FRONTEND
 const validarFormulario = () => {
     const nombre = inputs.nombre.value.trim();
     const email = inputs.email.value.trim();
@@ -36,14 +39,73 @@ const validarFormulario = () => {
     if (!confirmPassword) return "Debe confirmar la contraseña.";
     if (password !== confirmPassword) return "Las contraseñas no coinciden.";
     if (!inputs.terminos.checked) return "Debe aceptar los términos y condiciones.";
-    /*
-    Aqui vendria validacion de que no se repita el email en la db
-    if (!validacion) return "Este email ya estaba registrado";
-    */
+
     return null;
 };
 
-formulario.addEventListener("submit", (e) => {
+// FUERZA DE CONTRASEÑA
+const calcularFuerzaPassword = (password) => {
+    let score = 0;
+    if (!password) return score;
+
+    if (password.length >= 8) score++;
+    if (/[a-z]/.test(password)) score++;
+    if (/[A-Z]/.test(password)) score++;
+    if (/[0-9]/.test(password)) score++;
+    if (/[^A-Za-z0-9]/.test(password)) score++;
+
+    return score; // 0 - 5
+};
+
+const actualizarBarraFuerza = (password) => {
+    const score = calcularFuerzaPassword(password);
+    const porcentaje = (score / 5) * 100;
+
+    const colores = ['#e74c3c', '#f39c12', '#f1c40f', '#2ecc71', '#27ae60'];
+    const etiquetas = ['Muy débil', 'Débil', 'Aceptable', 'Buena', 'Muy buena'];
+
+    if (score === 0) {
+        strengthFill.style.width = "0%";
+        strengthFill.style.background = "transparent";
+        strengthLabel.textContent = "";
+        return;
+    }
+
+    strengthFill.style.width = porcentaje + "%";
+    strengthFill.style.background = colores[score - 1];
+    strengthLabel.textContent = etiquetas[score - 1];
+    strengthLabel.style.color = colores[score - 1];
+};
+
+// TOGGLE MOSTRAR / OCULTAR CONTRASEÑA
+const inicializarTogglesPassword = () => {
+    const toggles = document.querySelectorAll(".toggle-pass");
+
+    toggles.forEach(btn => {
+        btn.addEventListener("click", () => {
+            const targetId = btn.dataset.target;
+            const input = document.getElementById(targetId);
+
+            if (!input) return;
+
+            const esPassword = input.type === "password";
+            input.type = esPassword ? "text" : "password";
+            btn.textContent = esPassword ? "Ocultar" : "Mostrar";
+            btn.setAttribute("aria-pressed", String(esPassword));
+        });
+    });
+};
+
+
+// EVENTOS
+// Barra de fuerza
+inputs.password.addEventListener("input", (e) => {
+    actualizarBarraFuerza(e.target.value);
+});
+// Inicializar toggles
+inicializarTogglesPassword();
+// Submit formulario
+formulario.addEventListener("submit", async (e) => {
     e.preventDefault();
     limpiarError();
     const error = validarFormulario();
@@ -51,5 +113,41 @@ formulario.addEventListener("submit", (e) => {
         mostrarError(error);
         return;
     }
-    console.log("Formulario válido. Enviando...");
+    // ENVIO BACKEND
+    /*
+    try {
+        const response = await fetch("http://localhost:8000/registro", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({
+                nombre: inputs.nombre.value,
+                email: inputs.email.value,
+                password: inputs.password.value
+            })
+        });
+
+        const data = await response.json();
+
+        if (!response.ok) {
+            mostrarError(data.mensaje);
+            return;
+        }
+
+    } catch (err) {
+        mostrarError("Error de conexión con el servidor");
+        return;
+    }
+    */
+    // SIMULACION DE ENVÍO
+    btnRegistrar.disabled = true;
+    const textoOriginal = btnRegistrar.textContent;
+    btnRegistrar.textContent = "Registrando...";
+
+    setTimeout(() => {
+        btnRegistrar.disabled = false;
+        btnRegistrar.textContent = textoOriginal;
+        formulario.reset();
+        actualizarBarraFuerza("");
+        alert("Registro simulado completado");
+    }, 2000);
 });

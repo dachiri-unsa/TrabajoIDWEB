@@ -189,3 +189,76 @@ button[type="reset"]:hover {
         0 15px 40px rgba(0, 0, 0, 0.6),
         0 0 30px rgba(204, 0, 0, 0.2);
 }
+
+.password-field {
+    position: relative;
+    padding-bottom: 40px;
+    overflow: visible;
+}
+
+/* Boton de mostrar/ocultar */
+.password-field .toggle-pass {
+    position: absolute;
+    right: 8px;
+    top: 36px;
+    background: transparent;
+    border: none;
+    color: #b02c2b;
+    cursor: pointer;
+    font-size: 0.9rem;
+    padding: 4px 6px;
+}
+
+/* Medidor contraseña (siempre dentro del contenedor) */
+.password-strength {
+    position: absolute;
+    left: 8px;
+    right: 8px;
+    bottom: 18px;
+    height: 6px;
+    background: rgba(255,255,255,0.08);
+    border-radius: 6px;
+    overflow: hidden;
+}
+
+/* Relleno que crece (anima la anchura) */
+.password-strength__fill {
+    height: 100%;
+    width: 0%;
+    background: transparent;
+    transition: width 250ms ease, background 250ms ease;
+}
+
+/* Etiqueta de texto bajo el medidor */
+.password-strength-label {
+    position: absolute;
+    left: 8px;
+    bottom: 0px;
+    font-size: 0.85rem;
+    line-height: 1;
+    color: rgba(255,255,255,0.9);
+    pointer-events: none;
+    height: 16px;
+    text-overflow: ellipsis;
+}
+/* botón con estado de carga */
+button.loading {
+    position: relative;
+    pointer-events: none;
+    opacity: 0.85;
+    }
+button.loading::after {
+    content: "";
+    box-sizing: border-box;
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    border: 2px solid rgba(255,255,255,0.2);
+    border-top-color: rgba(255,255,255,0.9);
+    animation: spin 0.8s linear infinite;
+}
+@keyframes spin { to { transform: translateY(-50%) rotate(360deg); } }
