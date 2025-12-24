@@ -1,6 +1,6 @@
 import mysql.connector
-# Usando variables de entorno
 import os
+# Usando variables de entorno
 DB_HOST = os.getenv('DB_HOST', 'localhost')
 DB_USER = os.getenv('DB_USER', 'root')
 DB_PASS = os.getenv('DB_PASS', '1234')
@@ -15,6 +15,7 @@ def get_conexion():
     )
     return conexion
 
+""" Operaciones CRUD para la tabla usuario """
 def crear_usuario(gmail, nombre, contrasenia, recibir_correos):
     conn = get_conexion()
     cursor = conn.cursor()

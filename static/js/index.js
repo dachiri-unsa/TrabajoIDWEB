@@ -34,17 +34,15 @@ document.addEventListener("DOMContentLoaded", async () => {
     
     if (sesion) {
         const usuario = JSON.parse(sesion);
-        // 1. Ocultamos los botones de Login/Registro
+        // Ocultamos los botones de Login/Registro
         elementosInvitado.forEach(el => el.style.setProperty("display", "none", "important"));
-        
-        // 2. Mostramos los de Usuario
+        // Mostramos los de Usuario
         elementosUsuario.forEach(el => el.style.setProperty("display", "block", "important"));
-        
-        // 3. Escribimos el nombre
+
         if (nombreDisplay) nombreDisplay.textContent = usuario.nombre;
     } 
     else {
-        // Si no hay sesión, nos aseguramos de que se vea el login
+        // Si no hay sesión, nos aseguramos de que se vean los botones de Login/Registro
         elementosInvitado.forEach(el => el.style.display = "block");
         elementosUsuario.forEach(el => el.style.display = "none");
     }

@@ -1,24 +1,31 @@
-# Avance del proyecto final - individual
-## IDWEB - A
-**Apellidos y nombres:** Daniel Cooper Achiri Cuevas
+# TrabajoIDWEB - Proyecto Final Individual
 
-**CUI:** 20253459
+URL del proyecto hospedado: https://dachiri.pythonanywhere.com/ 
 
-### 🌐 Mi sitio web:
+Descripción
+-----------
+TrabajoIDWEB es una aplicación web informativa y de utilidad centrada en el juego Project Zomboid. Contiene páginas para ver y gestionar información de personaje, habilidades y recursos (mapas, mods recomendados, opción host), además de formularios de registro e inicio de sesión para usuarios. El proyecto incluye validaciones en cliente, interacciones dinámicas (medidor de contraseña, toggles, notificaciones) y puntos de integración para backend (registro, gestión de sesión).
 
-Aqui la pagina web: [Pagina web](https://dachiri-unsa.github.io/TrabajoIDWEB/)
+Lenguajes y tecnologías
+-----------------------
+- HTML
+- CSS
+- JavaScript
+- Python (backend)
+- SQL (base de datos)
 
-Mi sitio web se basa en el juego Project Zomboit y en la wiki de este juego al ser uno muy extenso en mecanicas. El objetivo de tener toda la informacion del juego de manera sencilla y rapida.
-![](imagenes/inicio/basePZ.jpg)
+Estructura básica
+-----------------
+- templates/ — archivos HTML (index, registrarse, inicio_sesion, personaje, habilidades)
+- static/css/ — estilos principales
+- static/javascript/ — scripts cliente (registrarse.js, index.js, inicio_sesion.js)
+- backend/ (o carpeta equivalente) — código Python para la API y lógica de sesión
+- db/ — scripts/CRUD usuario
 
-### 📁 Directorios
-- En el directorio "imagenes" ubíque en subdirectorios diferentes y con nombres referenciales, las imagenes usadas en la pagina web.
+Contacto
+--------
+Repositorio: https://github.com/dachiri-unsa/TrabajoIDWEB
 
-- En el directorio "Paginas" se encuentran todas las otras paginas, esto con el motivo que si llega haber muchas paginas se mantenga el orden y solamente el *index.html* este de primero.
+Autor: Achiri Cuevas, Daniel Cooper
 
-- EN el directorio "css" ubíque los archivos *.css* con nombres que referencian su finalidad, y con el *main.css* donde estaran los estilos base de todas las paginar que creare.
-
-### ❗Aclaraciones
-- El archivo ".gitignore" es para ocultar un fichero que se creo automaticamente al ponerle un icono extra a mi directorio. Este al no ser importante no lo pongo en el repositorio.
-
-- Logre mostrar la pagina gracias a una opcion de Github y el link se encuentra al inicio de este documento.
+2025

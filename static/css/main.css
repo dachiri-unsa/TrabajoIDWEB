@@ -3,7 +3,7 @@
     margin: 0;
     padding: 0;
 }
-
+/* imagen principal en el index (imagen de fondo)*/
 body {
     background: url(/static/img/inicio/banner_mejorado.jpg) center -30%/cover no-repeat fixed #000;
 }

@@ -1,12 +1,12 @@
 from db.db import crear_usuario, leer_usuario
 import os, json
 import mimetypes
-from urllib.parse import parse_qs
 
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 TEMPLATES_DIR = os.path.join(BASE_DIR, "templates")
 STATIC_DIR = os.path.join(BASE_DIR, "static")
 
+""" Funcion para respuestas JSON """
 def response_json(start_response, status, data):
     response_body = json.dumps(data).encode("utf-8")
     start_response(status, [
@@ -15,6 +15,7 @@ def response_json(start_response, status, data):
     ])
     return [response_body]
 
+""" Manejo de rutas API """
 def handle_api(environ, start_response):
     path = environ.get("PATH_INFO", "/")
     method = environ.get("REQUEST_METHOD")
@@ -82,6 +83,7 @@ def handle_api(environ, start_response):
         
     return response_json(start_response, "404 Not Found", {"mensaje": "API no encontrado"})
 
+""" Servir archivos HTML """
 def serve_html(filename, start_response):
     path = os.path.join(TEMPLATES_DIR, filename)
     if not os.path.exists(path):
@@ -91,7 +93,7 @@ def serve_html(filename, start_response):
     start_response("200 OK", [("Content-Type", "text/html; charset=utf-8")])
     return [html.encode("utf-8")]
 
-
+""" Servir archivos estaticos """
 def serve_static(path, start_response):
     file_path = os.path.join(STATIC_DIR, path.replace("/static/", ""))
     if not os.path.exists(file_path):
